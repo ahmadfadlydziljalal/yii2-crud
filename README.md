@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](https://getcom
 Either run
 
 ```
-composer require dzil/yii2-gii-dzil-crud "*" -vvv
+composer require dzil/yii2-crud "*" -vvv
 ```
 
 or add
 
 ```
-"dzil/yii2-gii-dzil-crud": "*"
+"dzil/yii-crud": "*"
 ```
 
 to the requirement section of your `composer.json` file.
