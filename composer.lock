@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfb5882ff8c8b7af141656d5dd48d6e5",
+    "content-hash": "8e2e8db4b59143e813997fbc87b8de7e",
     "packages": [
+        {
+            "name": "ahmadfadlydziljalal/yii2-dynamicform-v2",
+            "version": "dev-dev-dzil",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ahmadfadlydziljalal/yii2-dynamicform.git",
+                "reference": "daac7a2a41c022c4e5f8ca050e1b94cd0b39fce7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ahmadfadlydziljalal/yii2-dynamicform/zipball/daac7a2a41c022c4e5f8ca050e1b94cd0b39fce7",
+                "reference": "daac7a2a41c022c4e5f8ca050e1b94cd0b39fce7",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/css-selector": "*",
+                "symfony/dom-crawler": "*",
+                "yiisoft/yii2": "~2.0.5"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "wbraganca\\dynamicform\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Wanderson Bragança",
+                    "email": "wanderson.wbc@gmail.com",
+                    "homepage": "http://wbraganca.com"
+                }
+            ],
+            "description": "It is widget to yii2 framework to clone form elements in a nested manner, maintaining accessibility.",
+            "keywords": [
+                "Dev Dev Dzil",
+                "copy DOM element",
+                "extension",
+                "wbraganca",
+                "widget",
+                "yii2",
+                "yii2 dynamic form",
+                "yii2-dynamicform"
+            ],
+            "support": {
+                "issues": "https://github.com/wbraganca/yii2-dynamicform/issues",
+                "source": "https://github.com/wbraganca/yii2-dynamicform",
+                "wiki": "https://github.com/wbraganca/yii2-dynamicform/wiki/"
+            },
+            "time": "2025-09-10T04:46:21+00:00"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v5.2.3",
@@ -634,59 +688,6 @@
             "time": "2024-12-23T08:48:59+00:00"
         },
         {
-            "name": "wbraganca/yii2-dynamicform",
-            "version": "dev-dev-dzil",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ahmadfadlydziljalal/yii2-dynamicform.git",
-                "reference": "daac7a2a41c022c4e5f8ca050e1b94cd0b39fce7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ahmadfadlydziljalal/yii2-dynamicform/zipball/daac7a2a41c022c4e5f8ca050e1b94cd0b39fce7",
-                "reference": "daac7a2a41c022c4e5f8ca050e1b94cd0b39fce7",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/css-selector": "*",
-                "symfony/dom-crawler": "*",
-                "yiisoft/yii2": "~2.0.5"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "wbraganca\\dynamicform\\": "src"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Wanderson Bragança",
-                    "email": "wanderson.wbc@gmail.com",
-                    "homepage": "http://wbraganca.com"
-                }
-            ],
-            "description": "It is widget to yii2 framework to clone form elements in a nested manner, maintaining accessibility.",
-            "keywords": [
-                "Dev Dev Dzil",
-                "copy DOM element",
-                "extension",
-                "wbraganca",
-                "widget",
-                "yii2",
-                "yii2 dynamic form",
-                "yii2-dynamicform"
-            ],
-            "support": {
-                "issues": "https://github.com/wbraganca/yii2-dynamicform/issues",
-                "wiki": "https://github.com/wbraganca/yii2-dynamicform/wiki/",
-                "source": "https://github.com/wbraganca/yii2-dynamicform"
-            },
-            "time": "2025-09-10T04:46:21+00:00"
-        },
-        {
             "name": "yiisoft/yii2",
             "version": "2.0.53",
             "source": {
@@ -1056,7 +1057,7 @@
     "packages-dev": [],
     "aliases": [
         {
-            "package": "wbraganca/yii2-dynamicform",
+            "package": "ahmadfadlydziljalal/yii2-dynamicform-v2",
             "version": "dev-dev-dzil",
             "alias": "2.0.3",
             "alias_normalized": "2.0.3.0"
@@ -1064,7 +1065,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wbraganca/yii2-dynamicform": 20
+        "ahmadfadlydziljalal/yii2-dynamicform-v2": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
