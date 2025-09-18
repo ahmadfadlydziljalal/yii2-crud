@@ -35,5 +35,8 @@
         "allow-plugins": {
             "yiisoft/yii2-composer": true
         }
+    },
+    "extra": {
+        "bootstrap": "dzil\\yii2_crud\\Bootstrap"
     }
 }
