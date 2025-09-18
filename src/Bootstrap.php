@@ -17,8 +17,12 @@ class Bootstrap implements BootstrapInterface
                 $gii->generators['dzilcrud'] = [
                     'class' => 'dzil\yii2_crud\generators\Generator',
                     'templates' => [
-                        'default' => '@dzilcrud/generators/template/default',
-                        'ajax'    => '@dzilcrud/generators/template/ajax',
+                        'default'                     => '@dzilcrud/generators/template/default/default',
+                        'master-details'              => '@dzilcrud/generators/template/default/master_details',
+                        'master-details-details'      => '@dzilcrud/generators/template/default/master_details_details',
+                        'ajax-default'                => '@dzilcrud/generators/template/ajax/default',
+                        'ajax-master-details'         => '@dzilcrud/generators/template/ajax/master_details',            
+                        'ajax-master-details-details' => '@dzilcrud/generators/template/ajax/master_details_details',    
                     ],
                 ];
             }
