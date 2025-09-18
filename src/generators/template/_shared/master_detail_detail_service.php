@@ -8,7 +8,7 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /** @var $this yii\web\View */
-/** @var $generator \dzil\yii2_crud\generators\Generator */
+/** @var $generator \dzil\crud\generators\Generator */
 
 $serviceClassName = $generator->getServiceClassName();
 $modelClass = StringHelper::basename($generator->modelClass);
@@ -31,7 +31,7 @@ use <?= $generator->modelsClassDetail ?>;
 <?php if ($detailDetailModelClass): ?>
 use <?= $generator->modelsClassDetailDetail ?>;
 <?php endif; ?>
-use dzil\yii2_crud\Tabular;
+use dzil\crud\Tabular;
 use yii\db\Exception;
 use yii\helpers\ArrayHelper;
 use Throwable;

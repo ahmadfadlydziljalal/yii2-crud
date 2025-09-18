@@ -1,6 +1,6 @@
 <?php
 
-namespace dzil\yii2_crud;
+namespace dzil\crud;
 
 use Yii;
 use yii\base\BootstrapInterface;
@@ -15,7 +15,7 @@ class Bootstrap implements BootstrapInterface
             $gii = $app->getModule('gii');
             if (!isset($gii->generators['dzilcrud'])) {
                 $gii->generators['dzilcrud'] = [
-                    'class' => 'dzil\yii2_crud\generators\Generator',
+                    'class' => 'dzil\crud\generators\Generator',
                     'templates' => [
                         'default'                     => '@dzilcrud/generators/template/default/default',
                         'master-details'              => '@dzilcrud/generators/template/default/master_details',
