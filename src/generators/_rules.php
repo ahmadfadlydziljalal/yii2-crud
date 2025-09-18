@@ -1,5 +1,6 @@
 <?php
 
+use dzil\crud\generators\Generator;
 use yii\db\BaseActiveRecord;
 use yii\web\Controller;
 
@@ -21,16 +22,18 @@ return [
     [['messageCategory'], 'validateMessageCategory', 'skipOnEmpty' => false],
 
     [['modelsClassDetail'], 'required', 'when' => function ($model) {
-        return $model->template === 'master-details';
+        return in_array($model->template, [Generator::AJAX_MASTER_DETAIL_TEMPLATE, Generator::MASTER_DETAIL_TEMPLATE]);
     }, 'whenClient' => "function (attribute, value) {
-                return $('#generator-template').val() === 'master-details';
-            }", 'message' => 'Harus di-isi jika template master-details'],
+        var template = $('#generator-template').val();
+        return template === 'master-details' || template === 'ajax-master-details';
+    }", 'message' => 'Required if using 1st level master-details template'],
 
     [['modelsClassDetailDetail'], 'required', 'when' => function ($model) {
-        return $model->template === 'master-details-details';
+        return in_array($model->template, [Generator::AJAX_MASTER_DETAIL_DETAIL_TEMPLATE, Generator::MASTER_DETAIL_DETAIL_TEMPLATE]);
     }, 'whenClient' => "function (attribute, value) {
-                return $('#generator-template').val() === 'master-details-details';
-            }", 'message' => 'Harus di-isi jika template master-details-details'],
+        var template = $('#generator-template').val();
+        return template === 'master-details-details' || template === 'ajax-master-details-details';
+    }", 'message' => 'Required if using 2nd level master-details template'],
 
     [['viewPath', 'labelID'], 'safe'],
 ];
