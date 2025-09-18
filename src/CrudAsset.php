@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
  */
 class CrudAsset extends AssetBundle
 {
-    public $sourcePath = '@dzilcrud/generators/assets';
+    public $sourcePath = '@dzilcrud/assets';
 
     /*public $publishOptions = [
         'forceCopy' => true,
