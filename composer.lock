@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f5bff71a6787a8c2e2b631f935b0f9e",
+    "content-hash": "eb54ea043d305de55f2973bd31b2b506",
     "packages": [
         {
             "name": "ahmadfadlydziljalal/yii2-dynamicform-v2",
-            "version": "dev-dev-dzil",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ahmadfadlydziljalal/yii2-dynamicform.git",
@@ -1057,9 +1057,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ahmadfadlydziljalal/yii2-dynamicform-v2": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
