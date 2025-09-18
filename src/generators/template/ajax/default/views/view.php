@@ -1,0 +1,138 @@
+<?php
+
+use yii\helpers\Inflector;
+use yii\helpers\StringHelper;
+
+/** @var $this yii\web\View */
+/** @var $generator \dzil\yii2_crud\generators\Generator */
+
+$urlParams = $generator->generateUrlParams();
+$labelID = empty($generator->labelID) ? $generator->getNameAttribute() : $generator->labelID;
+
+echo "<?php\n";
+?>
+
+use yii\widgets\DetailView;
+use yii\helpers\Html;
+use mdm\admin\components\Helper;
+use yii\bootstrap5\ButtonDropdown;
+
+/* @var $this yii\web\View */
+/* @var $model <?= ltrim($generator->modelClass, '\\') ?> */
+/* @see <?= $generator->controllerClass ?>::actionView() */
+
+$this->title = $model-><?= $labelID ?>;
+$this->params['breadcrumbs'][] = ['label' => <?= $generator->generateString(Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>, 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+
+<div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-view d-flex flex-column gap-3">
+
+    <?='<?php if (!Yii::$app->request->isAjax){ ?>'."\n"?>
+        <div class="d-flex justify-content-between flex-wrap gap-4 gap-md-2">
+            <h1 class="my-0"><?= "<?= " ?>Html::encode($this->title) ?></h1>
+            <div class="d-flex flex-row flex-wrap align-items-center" style="gap: .5rem">
+                <?= "<?= " ?>Html::a(<?= $generator->generateString('Back') ?>, Yii::$app->request->referrer, ['class' => 'btn btn-outline-secondary']) ?>
+                <?= "<?= " ?>Html::a(<?= $generator->generateString('Index') ?>, ['index'], ['class' => 'btn btn-outline-primary']) ?>
+                <?= "<?= " ?>Html::a(<?= $generator->generateString('Create More') ?>, ['create'], ['class' => 'btn btn-success']) ?>
+                <?= "<?php " ?>
+
+                    $items = [
+                        [
+                            'label' => 'Update',
+                            'url' => ['update', 'id' => $model->id],
+                            'linkOptions' => [
+                                'data-pjax' => 0
+                            ]
+                        ],
+                    ];
+
+                    if(Helper::checkRoute('delete')) :
+                        $items = array_merge($items,[
+                            '<li><hr class="dropdown-divider"></li>',
+                            [
+                                'label' => <?= $generator->generateString('Delete') ?>,
+                                'url' => ['delete', <?= $urlParams ?>],
+                                'linkOptions' => [
+                                    'class' => 'text-danger',
+                                    'data' => [
+                                        'confirm' => 'Are you sure you want to delete this item?',
+                                        'method' => 'post',
+                                    ],
+                                ]
+                            ]
+                        ]);
+                    endif;
+
+                    echo ButtonDropdown::widget([
+                        'label' => '<i class="bi bi-three-dots-vertical"></i>',
+                        'dropdown' => [
+                            'items' => $items,
+                            'options' => [
+                                'class' => 'dropdown-menu dropdown-menu-end'
+                            ]
+                        ],
+                        'buttonOptions' => [
+                            'class' => 'btn btn-outline-secondary dropdown-toggle text-body-emphasis',
+                            'type' => 'button',
+                            'data-bs-toggle' => 'dropdown',
+                            'aria-expanded' => false
+                        ],
+                        'encodeLabel' => false,
+                    ]);
+                ?>
+            </div>
+        </div>
+    <?="<?php } ?>\n"?>
+    <?php $timestamp = ['created_at', 'updated_at',] ?>
+    <?php $blameable = ['created_by', 'updated_by',] ?>
+
+    <?= "<?= " ?>DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+    <?php
+    if (($tableSchema = $generator->getTableSchema()) === false) {
+        foreach ($generator->getColumnNames() as $name) {
+            if ($name == 'id') {
+                continue;
+            }
+            echo "            '" . $name . "',\n";
+        }
+    } else {
+        foreach ($generator->getTableSchema()->columns as $column) {
+
+            if( $column->name == 'id'){
+                continue;
+            }
+            $format = $generator->generateColumnFormat($column);
+
+            if(in_array($column->name, $timestamp)){
+                echo "           [
+                    'attribute' => '" . $column->name . "',\n" .
+                    "                    'format' => 'datetime'," .
+                    "            \n           ],\n";
+                continue;
+            }
+
+
+            if(in_array($column->name, $blameable)){
+                echo "           [
+                    'attribute' => '" . $column->name . "',\n" .
+                    "                    'value' => function(\$model){ return app\models\User::findOne(\$model->$column->name)->username; }" .
+                    "            \n           ],\n";
+                continue;
+            }
+
+            echo "           '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+        }
+    } ?>
+        ],
+    ]) ?>
+
+    <?='<?php if (!Yii::$app->request->isAjax){ ?>'."\n"?>
+        <div class="d-flex flex-row flex-wrap">
+            <?= "<?= " ?>Html::a(<?= $generator->generateString('Index') ?>, ['index'] ,['class' => 'btn btn-outline-secondary']) ?>
+        </div>
+    <?="<?php } ?>\n"?>
+
+</div>

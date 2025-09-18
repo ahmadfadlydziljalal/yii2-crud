@@ -1,0 +1,51 @@
+
+#crud-datatable .card {
+	border: none;
+}
+
+#crud-datatable .card .kv-panel-before {
+	padding: 0 0 10px 0;
+	border-bottom: none;
+}
+
+#crud-datatable .card .kv-panel-after {
+	padding: 16px 0 16px 8px;
+	border-top: none;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+#crud-datatable .card .card-footer {
+
+}
+
+#crud-datatable .kv-expand-header-icon {
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+#crud-datatable .kv-expand-icon-cell {
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+#crud-datatable .kv-grid-toolbar button.ui-corner-all {
+	border-radius: 0 4px 4px 0 !important;
+	height: 34px;
+}
+
+#crud-datatable .kv-grid-toolbar button.ui-corner-all > span.ui-button-text {
+	background: #fff;
+}
+
+#crud-datatable .card-header {
+	border: 1px solid #dee2e6;
+	border-bottom: none;
+}
+
+#crud-datatable .card-footer {
+	border: 1px solid #dee2e6;
+	border-top: none;
+	background-color: transparent;
+}
