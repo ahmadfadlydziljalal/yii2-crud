@@ -1,5 +1,5 @@
 {
-    "name": "ahmadfadlydziljalal/yii2-dzil-crud",
+    "name": "ahmadfadlydziljalal/yii2-crud",
     "description": "CRUD generator steroid, using dynamic form for master-detail paradigm",
     "type": "yii2-extension",
     "keywords": ["yii2", "gii", "generator", "crud"],
