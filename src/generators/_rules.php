@@ -14,7 +14,7 @@ return [
     [['controllerClass'], 'match', 'pattern' => '/(^|\\\\)[A-Z][^\\\\]+Controller$/', 'message' => 'Controller class name must start with an uppercase letter.'],
     [['controllerClass', 'searchModelClass'], 'validateNewClass'],
 
-    /** @see \dzil\yii2_crud\generators\Generator::validateModelClass()*/
+    /** @see \dzil\crud\generators\Generator::validateModelClass()*/
 
     [['modelClass'], 'validateModelClass'],
     [['enableI18N'], 'boolean'],

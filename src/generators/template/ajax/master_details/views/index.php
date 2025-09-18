@@ -4,7 +4,7 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /** @var $this yii\web\View */
-/** @var $generator \dzil\yii2_crud\generators\Generator */
+/** @var $generator \dzil\crud\generators\Generator */
 
 $urlParams = $generator->generateUrlParams();
 $nameAttribute = $generator->getNameAttribute();
@@ -17,8 +17,8 @@ echo "<?php\n";
     use yii\helpers\Html;
     use yii\bootstrap5\Modal;
     use kartik\grid\GridView;
-    use dzil\yii2_crud\CrudAsset;
-    use dzil\yii2_crud\BulkButtonWidget;
+    use dzil\crud\CrudAsset;
+    use dzil\crud\BulkButtonWidget;
 
 
     /* @var $this yii\web\View */

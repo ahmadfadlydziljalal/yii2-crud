@@ -3,7 +3,7 @@
 use yii\helpers\StringHelper;
 
 /** @var $this yii\web\View */
-/** @var $generator \dzil\yii2_crud\generators\Generator */
+/** @var $generator \dzil\crud\generators\Generator */
 
 $modelClass = StringHelper::basename($generator->modelClass);
 $urlParams = $generator->generateUrlParams();

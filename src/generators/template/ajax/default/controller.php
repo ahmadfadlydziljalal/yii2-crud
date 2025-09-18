@@ -8,7 +8,7 @@ use yii\helpers\StringHelper;
 
 
 /** @var $this yii\web\View */
-/** @var $generator \dzil\yii2_crud\generators\Generator */
+/** @var $generator \dzil\crud\generators\Generator */
 
 $controllerClass = StringHelper::basename($generator->controllerClass);
 $modelClass = StringHelper::basename($generator->modelClass);

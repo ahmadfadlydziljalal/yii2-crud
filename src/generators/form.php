@@ -2,7 +2,7 @@
 
 /** @var $this yii\web\View */
 /** @var $form yii\widgets\ActiveForm */
-/** @var $generator \dzil\yii2_crud\generators\Generator */
+/** @var $generator \dzil\crud\generators\Generator */
 
 echo $form->field($generator, 'modelClass');
 echo $form->field($generator, 'searchModelClass');

@@ -1,8 +1,8 @@
 <?php
 
-namespace dzil\yii2_crud\generators;
+namespace dzil\crud\generators;
 
-use dzil\yii2_crud\Behavior;
+use dzil\crud\Behavior;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\db\TableSchema;

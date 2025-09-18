@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dzil\\yii2_crud\\": "src/"
+            "dzil\\crud\\": "src/"
         }
     },
     "repositories": [
@@ -37,6 +37,6 @@
         }
     },
     "extra": {
-        "bootstrap": "dzil\\yii2_crud\\Bootstrap"
+        "bootstrap": "dzil\\crud\\Bootstrap"
     }
 }

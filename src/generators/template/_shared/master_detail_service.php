@@ -5,7 +5,7 @@
  */
 
 /** @var $this yii\web\View */
-/** @var $generator \dzil\yii2_crud\generators\Generator */
+/** @var $generator \dzil\crud\generators\Generator */
 
 use yii\helpers\StringHelper;
 
@@ -23,7 +23,7 @@ use Yii;
 use Exception;
 use <?= ltrim($generator->modelClass, '\\') ?>;
 use <?= ltrim($generator->modelsClassDetail, '\\') ?>;
-use dzil\yii2_crud\Tabular;
+use dzil\crud\Tabular;
 use yii\helpers\ArrayHelper;
 
 /**

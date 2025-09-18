@@ -1,6 +1,6 @@
 <?php
 
-namespace dzil\yii2_crud;
+namespace dzil\crud;
 
 use yii\web\AssetBundle;
 
