@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b4425078c2f6fc93210c808fd2f6649",
+    "content-hash": "dfb5882ff8c8b7af141656d5dd48d6e5",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1054,7 +1054,14 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "wbraganca/yii2-dynamicform",
+            "version": "dev-dev-dzil",
+            "alias": "2.0.3",
+            "alias_normalized": "2.0.3.0"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "wbraganca/yii2-dynamicform": 20
