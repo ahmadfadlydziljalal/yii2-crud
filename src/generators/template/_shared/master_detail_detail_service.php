@@ -31,7 +31,7 @@ use <?= $generator->modelsClassDetail ?>;
 <?php if ($detailDetailModelClass): ?>
 use <?= $generator->modelsClassDetailDetail ?>;
 <?php endif; ?>
-use app\generators\Tabular;
+use dzil\yii2_crud\Tabular;
 use yii\db\Exception;
 use yii\helpers\ArrayHelper;
 use Throwable;

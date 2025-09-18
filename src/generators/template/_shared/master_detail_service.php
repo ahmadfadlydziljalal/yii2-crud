@@ -23,7 +23,7 @@ use Yii;
 use Exception;
 use <?= ltrim($generator->modelClass, '\\') ?>;
 use <?= ltrim($generator->modelsClassDetail, '\\') ?>;
-use app\generators\Tabular;
+use dzil\yii2_crud\Tabular;
 use yii\helpers\ArrayHelper;
 
 /**
