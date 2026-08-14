@@ -71,7 +71,8 @@ echo "<?php\n";
     "clientOptions" => [
         "backdrop" => "static",
         "keyboard" => false
-    ] 
+    ],
+    "scrollable" => true, 
 ])?>' . "\n" ?>
 <?= '<?php Modal::end(); ?>' ?>
 
