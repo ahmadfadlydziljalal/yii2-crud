@@ -7,6 +7,7 @@
 /** @var $this yii\web\View */
 /** @var $generator \dzil\crud\generators\Generator */
 
+use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 $modelClass     = StringHelper::basename($generator->modelClass);
@@ -55,7 +56,7 @@ class <?= $serviceClass . "\n" ?>
             try {
                 if ($flag = $model->save(false)) {
                     foreach ($modelsDetail as $detail) {
-                        $detail-><?= strtolower($modelClass) ?>_id = $model->id;
+                        $detail-><?= Inflector::underscore($modelClass) ?>_id = $model->id;
                         if (!($flag = $detail->save(false))) {
                             break;
                         }
@@ -108,7 +109,7 @@ class <?= $serviceClass . "\n" ?>
                     }
 
                     foreach ($modelsDetail as $detail) {
-                        $detail-><?= strtolower($modelClass) ?>_id = $model->id;
+                        $detail-><?= Inflector::underscore($modelClass) ?>_id = $model->id;
                         if (!($flag = $detail->save(false))) {
                             break;
                         }
